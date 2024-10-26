@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a Estructuras de Datos</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css" crossorigin="anonymous"></head>
+<body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <header>
+        <h1>Introducción a Estructuras de Datos</h1>
+    </header>
+    <main>
+        <!--Indice de Contenido-->
+            <nav class="menu">
+                <ul class="menu-content">
+                  <h3> Contenidos</h3>
+                  <li><a href="#intro">1. Introducción</a></li>
+                  <li><a href="#pila">2. Pilas</a></li>
+                  <li><a href="#cola">3. Colas</a></li>
+                  <li><a href="#lista">4. Listas</a></li>
+                  <li><a href="#conclusion">5. Conclusiones</a></li>
+                </ul>
+            </nav>   
+        <!--Introduccion-->
+        <section id="intro" class="content">
+            <h2>1. Introducción a Estructuras de Datos</h2>
+            <p>Las estructuras de datos son formas específicas de organizar y almacenar datos para que puedan ser utilizados de manera eficiente. Las estructuras de datos adecuadas pueden mejorar la eficiencia del software, haciéndolo más rápido y permitiendo un acceso y manipulación de datos más fácil y seguro.</p>
+            <h3>Uso</h3>
+            <p> Son esenciales en la programación para manejar datos de diferentes tipos, como listas de elementos, filas de espera, y pilas de tareas. Usadas en aplicaciones, bases de datos, sistemas operativos y algoritmos, las estructuras de datos ayudan a resolver problemas de almacenamiento y acceso eficiente.</p>
+            <h3>Ventajas</h3>
+            <p><i class="fa-solid fa-circle-check" style="color: rgb(93, 137, 27);padding:0 10px 0 10px"></i>Facilitan la gestión y organización de grandes cantidades de datos. <br>
+                <i class="fa-solid fa-circle-check" style="color: rgb(93, 137, 27);padding:0 10px 0 10px"></i>Mejoran la eficiencia en la ejecución de programas y algoritmos.</p>
+            <h3>Desventajas</h3>
+            <p><i class="fa-solid fa-circle-xmark" style="color: rgb(168, 48, 27);padding:0 10px 0 10px"></i>Requieren conocimientos específicos para implementarse correctamente. <br>
+                <i class="fa-solid fa-circle-xmark" style="color: rgb(168, 48, 27);padding:0 10px 0 10px"></i>Pueden incrementar la complejidad del código.</p>
+        </section>
+        <section id="pila">
+            <h2>2. Pilas (Stacks)</h2>
+            <p>Las pilas son estructuras de datos de tipo LIFO (Last In, First Out), donde el último elemento en entrar es el primero en salir. Imagina una pila de platos: el último plato que colocas es el primero que puedes retirar.</p>
+            <figure class="figure">
+                <img src="../assets/pilas.png" alt="Representacion de Pilas"/>
+                <figcaption style="font-size: 12px;">Representación simplificada de una pila</figcaption>
+            </figure>
+            <h3>Uso</h3>
+                <ul class="mean">
+                    <li><strong>Deshacer acciones: </strong> Ideal para aplicaciones como editores de texto, donde las operaciones previas se deshacen en orden inverso.</li>
+                    <li><strong>Evaluación de expresiones: </strong> Utilizadas en compiladores y calculadoras para evaluar expresiones matemáticas.</li>
+                    <li><strong>Llamadas de función:</strong> Almacenan el orden de las llamadas para gestionar la recursión, ya que el último llamado es el primero en terminar.</li>
+                </ul>
+            <h3>Operaciones</h3>
+            <p> Las operaciones fundamentales en una pila son:</p>
+                <ul class="operaciones">
+                    <li><strong>Push (Empujar):</strong> Agregar un elemento en la parte superior de la pila.</li>
+                    <li><strong>Pop (Sacar):</strong> Eliminar el elemento superior de la pila.</li>
+                    <li><strong>Top/Peek (Tope/Vistazo):</strong> Observar el elemento superior sin eliminarlo.</li>
+                    <li><strong>isEmpty (Está vacía):</strong> Verificar si la pila no tiene elementos.</li>
+                </ul>
+            <h3>Ventajas</h3>
+            <p><i class="fa-solid fa-circle-check" style="color: rgb(93, 137, 27);padding:0 10px 0 10px"></i>Son muy eficientes para tareas donde se debe procesar o deshacer información en orden inverso.<br>
+                <i class="fa-solid fa-circle-check" style="color: rgb(93, 137, 27);padding:0 10px 0 10px"></i>Estructura simple y fácil de implementar.</p>
+            <h3>Desventajas</h3>
+            <p><i class="fa-solid fa-circle-xmark" style="color: rgb(168, 48, 27);padding:0 10px 0 10px"></i>El acceso está limitado al último elemento, lo que hace que sea menos adecuada para casos en los que se necesita acceder a elementos en posiciones arbitrarias.<br>
+                <i class="fa-solid fa-circle-xmark" style="color: rgb(168, 48, 27);padding:0 10px 0 10px"></i>No es adecuada si se requiere acceso aleatorio a elementos.</p>
+        </section>
+        <section id="cola">
+            <h2>3. Colas (Queues)</h2>
+            <p>Una cola es una estructura de datos donde el primer elemento en entrar es el primero en salir (FIFO - First In, First Out). Piensa en una fila en un banco: la primera persona en llegar es la primera en ser atendida.</p>
+            <figure class="figure">
+                <img src="../assets/colas.png" alt="Representacion de Colas"/>
+                <figcaption style="font-size: 12px;">Representación de una Cola</figcaption>
+            </figure>
+            <h3>Uso</h3>
+                <ul class="mean">
+                    <li><strong>Gestión de tareas en sistemas operativos: </strong> Para manejar procesos en sistemas multitarea, asignando los recursos al proceso que lleva más tiempo en espera.</li>
+                    <li><strong>Sistemas de atención:</strong> Como en bancos o servicios de atención al cliente, donde el primero en llegar es el primero en ser atendido.</li>
+                    <li><strong>Procesamiento en tiempo real:</strong> Útil en sistemas donde se requiere procesar datos en el orden en que llegan, como en redes o transmisiones en vivo.</li>
+                </ul>
+            <h3>Operaciones</h3>
+            <p> Las operaciones fundamentales en una cola son:</p>
+                <ul class="operaciones">
+                    <li><strong>Enqueue (Encolar): </strong> Agregar un elemento al final de la cola.</li>
+                    <li><strong>Dequeue (Desencolar): </strong> Eliminar el elemento al frente de la cola.</li>
+                    <li><strong>Front (Frente): </strong> Obtener el elemento al frente de la cola sin eliminarlo.</li>
+                    <li><strong>isEmpty (Está vacía):</strong> Verificar si la cola está vacía.</li>
+                    <li><strong>size (Tamaño): </strong> Obtener el número de elementos en la cola.</li>
+                </ul>
+            <h3>Ventajas</h3>
+            <p><i class="fa-solid fa-circle-check" style="color: rgb(93, 137, 27);padding:0 10px 0 10px"></i>Adecuada para procesos donde el orden de llegada es importante.<br>
+                <i class="fa-solid fa-circle-check" style="color: rgb(93, 137, 27);padding:0 10px 0 10px"></i>Útil para gestionar procesos de ejecución secuencial.</p>
+            <h3>Desventajas</h3>
+            <p><i class="fa-solid fa-circle-xmark" style="color: rgb(168, 48, 27);padding:0 10px 0 10px"></i>Acceso limitado a solo el primer y el último elemento. <br>
+                <i class="fa-solid fa-circle-xmark" style="color: rgb(168, 48, 27);padding:0 10px 0 10px"></i>No adecuada para operaciones que necesitan acceso aleatorio.</p>
+        </section>
+        <section id="lista">
+            <h2>4. Listas</h2>
+            <p>Las listas son estructuras de datos que permiten almacenar elementos en una secuencia ordenada. Pueden ser dinámicas, lo que facilita la adición y eliminación de elementos.</p>
+            <h3>4.1 Listas Simplemente Enlazadas</h3>
+                <p>En una lista simplemente enlazada, cada nodo contiene un valor y un puntero que indica la ubicación del siguiente nodo en la lista. Este tipo de lista es unidireccional, por lo que solo permite avanzar hacia adelante. La estructura suele tener:</p>
+                    <ul class="mean">
+                        <li>Un nodo inicial o cabeza (head) que marca el comienzo de la lista.</li>
+                        <li>Nodos intermedios que enlazan uno al siguiente.</li>
+                        <li>El último nodo apunta a un valor nulo (o null), indicando el final de la lista.</li>
+                    </ul>
+                <figure class="figure">
+                    <img src="../assets/Lista.webp" alt="Representacion de lista simple enlazada"/>
+                    <figcaption style="font-size: 12px;">Representación de una lista simplemente enlazada</figcaption>
+                </figure>
+                <h3>Uso</h3>
+                <p> Se usa cuando se necesita un acceso secuencial y agregar o eliminar elementos es frecuente. Ejemplos incluyen listas de reproducción y sistemas de administración de memoria.</p>
+                <h3>Ventajas</h3>
+                <p><i class="fa-solid fa-circle-check" style="color: rgb(93, 137, 27);padding:0 10px 0 10px"></i>Simplicidad y menor consumo de memoria (solo un puntero por nodo).<br>
+                    <i class="fa-solid fa-circle-check" style="color: rgb(93, 137, 27);padding:0 10px 0 10px"></i>Ideal para implementar pilas y colas, donde se necesita agregar o eliminar elementos en un solo extremo.</p>
+                <h3>Desventajas</h3>
+                <p><i class="fa-solid fa-circle-xmark" style="color: rgb(168, 48, 27);padding:0 10px 0 10px"></i>No permite regresar al nodo anterior sin recorrer la lista desde el inicio. <br>
+                    <i class="fa-solid fa-circle-xmark" style="color: rgb(168, 48, 27);padding:0 10px 0 10px"></i>Inserciones y eliminaciones en la mitad de la lista son menos eficientes.</p>
+            <h3>4.2 Listas Doblemente Enlazadas</h3>
+                <p>Las listas doblemente enlazadas tienen una estructura similar, pero cada nodo contiene dos punteros: uno apunta al nodo siguiente y el otro apunta al nodo anterior. Esta estructura bidireccional permite:</p>
+                        <ul class="mean">
+                            <li>Navegar hacia adelante y hacia atrás.</li>
+                            <li>Tener una cabeza y una cola para optimizar operaciones en ambos extremos.</li>
+                        </ul>
+                    <figure class="figure">
+                        <img src="../assets/dobleenlace.png" alt="Representacion de lista simple enlazada"/>
+                        <figcaption style="font-size: 12px;">Representación de una lista doblemente enlazada</figcaption>
+                    </figure>
+                    <h3>Uso</h3>
+                    <p> Se usa cuando se necesita un acceso secuencial y agregar o eliminar elementos es frecuente. Ejemplos incluyen listas de reproducción y sistemas de administración de memoria.</p>
+                    <h3>Ventajas</h3>
+                    <p><i class="fa-solid fa-circle-check" style="color: rgb(93, 137, 27);padding:0 10px 0 10px"></i>Acceso bidireccional, lo que hace que las inserciones y eliminaciones en el medio sean más eficientes.<br>
+                        <i class="fa-solid fa-circle-check" style="color: rgb(93, 137, 27);padding:0 10px 0 10px"></i>Útil para implementar estructuras de datos que requieren moverse en ambas direcciones, como en algoritmos que necesitan retroceder en la lista.</p>
+                    <h3>Desventajas</h3>
+                    <p><i class="fa-solid fa-circle-xmark" style="color: rgb(168, 48, 27);padding:0 10px 0 10px"></i>Ocupa más memoria por el segundo puntero.<br>
+                        <i class="fa-solid fa-circle-xmark" style="color: rgb(168, 48, 27);padding:0 10px 0 10px"></i>La implementación es un poco más compleja.</p>
+        </section>
+        <section id="conclusion">
+            <h2>5. Conclusiones</h2>
+            <p>Las estructuras de datos son fundamentales para la eficiencia y organización en el desarrollo de software. Cada estructura tiene sus propias ventajas y limitaciones, y la elección correcta depende de los requerimientos específicos de cada aplicación.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Jeffry Geovanni Hernández Paot</p>
+    </footer>
+    <script src="../Js/script.js"></script>
+</body>
+</html>
